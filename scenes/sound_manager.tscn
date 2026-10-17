@@ -1,0 +1,46 @@
+[gd_scene format=3 uid="uid://b80cdjxgj47sh"]
+
+[ext_resource type="AudioStream" uid="uid://bjafecwavnev3" path="res://assets/sound_effects/enemy-lose4.ogg" id="1_g5net"]
+[ext_resource type="Script" uid="uid://omgsep1fegds" path="res://scripts/sound_manager.gd" id="1_mdjn0"]
+[ext_resource type="AudioStream" uid="uid://0a4l56xxxvtb" path="res://assets/sound_effects/coin-coin3.ogg" id="3_22ksp"]
+[ext_resource type="AudioStream" uid="uid://cvasqmhr8uafb" path="res://assets/sound_effects/confirmation_001.ogg" id="5_7jwsb"]
+[ext_resource type="AudioStream" uid="uid://7senja4bvm4e" path="res://assets/sound_effects/bong_001.ogg" id="5_h42hm"]
+[ext_resource type="AudioStream" uid="uid://e11f3gn8moiu" path="res://assets/music/Near_and_Far.ogg" id="5_lxsk3"]
+[ext_resource type="AudioStream" uid="uid://chockaonmj7sx" path="res://assets/music/Unsolved-Investigation-isaiah658_0.ogg" id="5_m3oho"]
+[ext_resource type="AudioStream" uid="uid://0bhqlxa4ddyh" path="res://assets/sound_effects/squash-jump2.ogg" id="7_h42hm"]
+
+[node name="SoundManager" type="Control" unique_id=1618676113]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_mdjn0")
+
+[node name="SoundLose" type="AudioStreamPlayer" parent="." unique_id=85643749]
+stream = ExtResource("1_g5net")
+volume_db = -20.0
+
+[node name="SoundBattery" type="AudioStreamPlayer" parent="." unique_id=1152677206]
+stream = ExtResource("3_22ksp")
+volume_db = -15.0
+
+[node name="SoundButton" type="AudioStreamPlayer" parent="." unique_id=2048237470]
+stream = ExtResource("5_7jwsb")
+volume_db = -10.0
+
+[node name="MusicLevel" type="AudioStreamPlayer" parent="." unique_id=54011142]
+stream = ExtResource("5_m3oho")
+volume_db = -5.0
+
+[node name="MusicMenu" type="AudioStreamPlayer" parent="." unique_id=1237332588]
+stream = ExtResource("5_lxsk3")
+
+[node name="SoundJump" type="AudioStreamPlayer" parent="." unique_id=1981598692]
+stream = ExtResource("5_h42hm")
+volume_db = -10.0
+
+[node name="SoundSquash" type="AudioStreamPlayer" parent="." unique_id=1841645043]
+stream = ExtResource("7_h42hm")
+volume_db = -15.0

@@ -1,0 +1,277 @@
+[gd_scene format=3 uid="uid://d1teu4tp5h24b"]
+
+[ext_resource type="Script" uid="uid://drxm2dttk1cck" path="res://scripts/win_menu.gd" id="1_fwnpl"]
+[ext_resource type="FontFile" uid="uid://fi2iucbxxiyc" path="res://assets/resources/dogica.ttf" id="2_705q1"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ouk20"]
+bg_color = Color(0, 0.72156864, 0.40784314, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+corner_detail = 1
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fwnpl"]
+bg_color = Color(0, 0.72156864, 0.40784314, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+corner_detail = 1
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mae5d"]
+bg_color = Color(0.6392157, 0, 0.105882354, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qcsnf"]
+bg_color = Color(0, 0.72156864, 0.40784314, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+corner_detail = 1
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_frsyg"]
+bg_color = Color(0.6392157, 0, 0.105882354, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_705q1"]
+bg_color = Color(0.6392157, 0, 0.105882354, 1)
+corner_radius_top_left = 100
+corner_radius_top_right = 100
+corner_radius_bottom_right = 100
+corner_radius_bottom_left = 100
+corner_detail = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jcnpx"]
+bg_color = Color(0, 0.72156864, 0.40784314, 1)
+corner_radius_top_left = 90
+corner_radius_top_right = 90
+corner_radius_bottom_right = 90
+corner_radius_bottom_left = 90
+corner_detail = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lws6u"]
+bg_color = Color(0.6392157, 0, 0.105882354, 1)
+corner_radius_top_left = 90
+corner_radius_top_right = 90
+corner_radius_bottom_right = 90
+corner_radius_bottom_left = 90
+corner_detail = 20
+
+[node name="WinMenu" type="Control" unique_id=955961534]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+script = ExtResource("1_fwnpl")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=166211346]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+color = Color(0.6392157, 0, 0.105882354, 1)
+
+[node name="Label" type="Label" parent="." unique_id=1946206597]
+layout_mode = 0
+offset_left = 104.0
+offset_top = 480.0
+offset_right = 1154.0
+offset_bottom = 572.0
+theme_override_colors/font_color = Color(0, 0.72156864, 0.40784314, 1)
+theme_override_fonts/font = ExtResource("2_705q1")
+theme_override_font_sizes/font_size = 105
+text = "Succeeded!"
+horizontal_alignment = 1
+
+[node name="Play" type="Button" parent="." unique_id=1044235045]
+layout_mode = 0
+offset_left = 784.0
+offset_top = 384.0
+offset_right = 1108.0
+offset_bottom = 448.0
+theme_override_colors/font_color = Color(0.6392157, 0, 0.105882354, 1)
+theme_override_colors/font_pressed_color = Color(0.6392157, 0, 0.105882354, 1)
+theme_override_colors/font_hover_color = Color(0, 0.72156864, 0.40784314, 1)
+theme_override_fonts/font = ExtResource("2_705q1")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_ouk20")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_fwnpl")
+theme_override_styles/hover = SubResource("StyleBoxFlat_mae5d")
+text = "Play Again"
+
+[node name="Settings" type="Button" parent="." unique_id=949630471]
+layout_mode = 0
+offset_left = 496.0
+offset_top = 384.0
+offset_right = 760.0
+offset_bottom = 448.0
+theme_override_colors/font_color = Color(0.6392157, 0, 0.105882354, 1)
+theme_override_colors/font_pressed_color = Color(0.6392157, 0, 0.105882354, 1)
+theme_override_colors/font_hover_color = Color(0, 0.72156864, 0.40784314, 1)
+theme_override_fonts/font = ExtResource("2_705q1")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_qcsnf")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_qcsnf")
+theme_override_styles/hover = SubResource("StyleBoxFlat_frsyg")
+text = "Settings"
+
+[node name="Control" type="Control" parent="." unique_id=1941738074]
+anchors_preset = 0
+offset_left = 96.0
+offset_top = 56.0
+offset_right = 280.0
+offset_bottom = 240.0
+
+[node name="Panel" type="Panel" parent="Control" unique_id=79965389]
+layout_mode = 0
+offset_right = 184.0
+offset_bottom = 184.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_705q1")
+
+[node name="Panel1" type="Panel" parent="Control" unique_id=407174126]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 176.0
+offset_bottom = 176.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_jcnpx")
+
+[node name="Panel2" type="Panel" parent="Control" unique_id=706419550]
+layout_mode = 0
+offset_left = 24.0
+offset_top = 24.0
+offset_right = 160.0
+offset_bottom = 160.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_lws6u")
+
+[node name="Panel3" type="Panel" parent="Control" unique_id=469476233]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 40.0
+offset_right = 144.0
+offset_bottom = 144.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_jcnpx")
+
+[node name="Panel4" type="Panel" parent="Control" unique_id=971026089]
+layout_mode = 0
+offset_left = 56.0
+offset_top = 56.0
+offset_right = 128.0
+offset_bottom = 128.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_lws6u")
+
+[node name="Panel5" type="Panel" parent="Control" unique_id=1913185121]
+layout_mode = 0
+offset_left = 72.0
+offset_top = 72.0
+offset_right = 112.0
+offset_bottom = 112.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_jcnpx")
+
+[node name="Control2" type="Control" parent="." unique_id=89672241]
+anchors_preset = 0
+offset_left = 336.0
+offset_top = 56.0
+offset_right = 520.0
+offset_bottom = 240.0
+
+[node name="Panel" type="Panel" parent="Control2" unique_id=908712041]
+layout_mode = 0
+offset_right = 184.0
+offset_bottom = 184.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_705q1")
+
+[node name="Panel1" type="Panel" parent="Control2" unique_id=1466314235]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 176.0
+offset_bottom = 176.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_jcnpx")
+
+[node name="Panel2" type="Panel" parent="Control2" unique_id=1949820266]
+layout_mode = 0
+offset_left = 24.0
+offset_top = 24.0
+offset_right = 160.0
+offset_bottom = 160.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_lws6u")
+
+[node name="Panel3" type="Panel" parent="Control2" unique_id=1151998410]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 40.0
+offset_right = 144.0
+offset_bottom = 144.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_jcnpx")
+
+[node name="Panel4" type="Panel" parent="Control2" unique_id=1047154974]
+layout_mode = 0
+offset_left = 56.0
+offset_top = 56.0
+offset_right = 128.0
+offset_bottom = 128.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_lws6u")
+
+[node name="Panel5" type="Panel" parent="Control2" unique_id=599576416]
+layout_mode = 0
+offset_left = 72.0
+offset_top = 72.0
+offset_right = 112.0
+offset_bottom = 112.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_jcnpx")
+
+[node name="Control3" type="Control" parent="." unique_id=637176664]
+anchors_preset = 0
+offset_left = 216.0
+offset_top = 232.0
+offset_right = 400.0
+offset_bottom = 416.0
+
+[node name="Panel" type="Panel" parent="Control3" unique_id=879554720]
+layout_mode = 0
+offset_right = 184.0
+offset_bottom = 184.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_705q1")
+
+[node name="Panel1" type="Panel" parent="Control3" unique_id=685430575]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 176.0
+offset_bottom = 176.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_jcnpx")
+
+[node name="Panel2" type="Panel" parent="Control3" unique_id=1953513099]
+layout_mode = 0
+offset_left = 24.0
+offset_top = 24.0
+offset_right = 160.0
+offset_bottom = 160.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_lws6u")
+
+[node name="Panel3" type="Panel" parent="Control3" unique_id=1269931309]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 40.0
+offset_right = 144.0
+offset_bottom = 144.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_jcnpx")
+
+[node name="Panel4" type="Panel" parent="Control3" unique_id=2146606092]
+layout_mode = 0
+offset_left = 56.0
+offset_top = 56.0
+offset_right = 128.0
+offset_bottom = 128.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_lws6u")
+
+[node name="Panel5" type="Panel" parent="Control3" unique_id=652197033]
+layout_mode = 0
+offset_left = 72.0
+offset_top = 72.0
+offset_right = 112.0
+offset_bottom = 112.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_jcnpx")
+
+[connection signal="pressed" from="Play" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Settings" to="." method="_on_settings_pressed"]

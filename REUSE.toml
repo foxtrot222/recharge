@@ -1,0 +1,39 @@
+version = 1
+
+# All files in scenes files in scenes directory and project.godot.
+[[annotations]]
+path = [
+	"scenes/*",
+	"project.godot",
+	"export_presets.cfg"
+]
+SPDX-FileCopyrightText = "2026 Tirth Kavathiya <tirthkavathiya@gmail.com>"
+SPDX-License-Identifier = "GPL-3.0-or-later"
+
+# Godot generated files
+[[annotations]]
+path = [
+	"**/*.uid",
+	"**/*.import"
+]
+SPDX-FileCopyrightText = "2026 Tirth Kavathiya <tirthkavathiya@gmail.com>"
+SPDX-License-Identifier = "CC0-1.0"
+
+# License not provied yet
+[[annotations]]
+path = [
+	"assets/models/enemy.glb",
+	"assets/models/player.glb",
+	"assets/models/player_robot_mix_decals.png"
+]
+SPDX-FileComment = "This files are obtained and modified from .blend file taken from https://borncg.itch.io/"
+
+[[annotations]]
+path = [
+	"assets/sound_effects/coin-coin3.ogg",
+	"assets/sound_effects/enemy-lose4.ogg",
+	"assets/sound_effects/jump-jump4.ogg",
+	"assets/sound_effects/squash-jump2.ogg"
+]
+SPDX-FileComment = "This files are obtained from https://borncg.itch.io/"
+

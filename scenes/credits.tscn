@@ -1,0 +1,105 @@
+[gd_scene format=3 uid="uid://dmaklpuxe7opo"]
+
+[ext_resource type="Script" uid="uid://3erdttwf0mwu" path="res://scripts/credits.gd" id="1_2ckv8"]
+[ext_resource type="FontFile" uid="uid://fi2iucbxxiyc" path="res://assets/resources/dogica.ttf" id="2_0ctdu"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0bpdh"]
+bg_color = Color(0.6392157, 0, 0.105882354, 1)
+
+[node name="Credits" type="ScrollContainer" unique_id=949432947]
+offset_right = 1152.0
+offset_bottom = 648.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_0bpdh")
+horizontal_scroll_mode = 0
+vertical_scroll_mode = 3
+script = ExtResource("1_2ckv8")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=428995507]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer" unique_id=1284981139]
+layout_mode = 2
+theme_override_colors/default_color = Color(0, 0.72156864, 0.40784314, 1)
+theme_override_constants/line_separation = 5
+theme_override_constants/paragraph_separation = 5
+theme_override_fonts/normal_font = ExtResource("2_0ctdu")
+theme_override_fonts/bold_font = ExtResource("2_0ctdu")
+theme_override_font_sizes/normal_font_size = 18
+theme_override_font_sizes/bold_font_size = 20
+bbcode_enabled = true
+text = "[center][b]Credits[/b]
+
+[b]Created By[/b]
+foxtrot222
+
+[b]Tools Used[/b]
+Godot Engine
+Blender
+
+[b]Music[/b]
+Menu Music - Near and Far - By Joth
+Level Music - Unsolved Investigation - By isaiah658
+
+[b]Sound Effects By[/b]
+kenny.nl
+BornCG
+
+[b]UI[/b]
+Font - Dogica
+Charge Icon By Bootstrap Icons (modified)
+
+[b]Acknowledgements[/b]
+Special thanks to PheonixKB for testing the game and providing valuable feedback.
+Thanks to BornCG for the excellent tutorial series on creating a 3D platformer game.
+
+[b]Icon License[/b]
+The MIT License (MIT)
+
+Copyright (c) 2019-2024 The Bootstrap Authors
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the \"Software\"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included
+in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
+
+[b]Godot Engine License[/b]
+This game uses Godot Engine, available under the following license:
+
+Copyright (c) 2014-present Godot Engine contributors.
+Copyright (c) 2007-2014 Juan Linietsky, Ariel Manzur.
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the \"Software\"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included
+in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.[/center]"
+fit_content = true
