@@ -1,0 +1,78 @@
+[gd_scene format=3 uid="uid://bgx4n2ebo8cmq"]
+
+[ext_resource type="Script" uid="uid://4s5vh41ifj51" path="res://game_over_menu.gd" id="1_prwox"]
+[ext_resource type="FontFile" uid="uid://fi2iucbxxiyc" path="res://Assets/Resources/dogica.ttf" id="2_wp3el"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ouk20"]
+bg_color = Color(0, 0.72156864, 0.40784314, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+corner_detail = 1
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_prwox"]
+bg_color = Color(0, 0.72156864, 0.40784314, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+corner_detail = 1
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mae5d"]
+bg_color = Color(0.6392157, 0, 0.105882354, 1)
+
+[node name="GameOverMenu" type="Control" unique_id=955961534]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+script = ExtResource("1_prwox")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=166211346]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+color = Color(0.6392157, 0, 0.105882354, 1)
+
+[node name="Label" type="Label" parent="." unique_id=1946206597]
+layout_mode = 0
+offset_left = 104.0
+offset_top = 480.0
+offset_right = 1154.0
+offset_bottom = 572.0
+theme_override_colors/font_color = Color(0, 0.72156864, 0.40784314, 1)
+theme_override_fonts/font = ExtResource("2_wp3el")
+theme_override_font_sizes/font_size = 105
+text = "Game Over!"
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="." unique_id=367438796]
+layout_mode = 0
+offset_left = 104.0
+offset_top = 96.0
+offset_right = 554.0
+offset_bottom = 140.0
+theme_override_colors/font_color = Color(0, 0.72156864, 0.40784314, 1)
+theme_override_fonts/font = ExtResource("2_wp3el")
+theme_override_font_sizes/font_size = 50
+text = "No Charge left"
+horizontal_alignment = 1
+
+[node name="Button" type="Button" parent="." unique_id=1044235045]
+layout_mode = 0
+offset_left = 784.0
+offset_top = 384.0
+offset_right = 1108.0
+offset_bottom = 445.0
+theme_override_colors/font_color = Color(0.6392157, 0, 0.105882354, 1)
+theme_override_colors/font_pressed_color = Color(0.6392157, 0, 0.105882354, 1)
+theme_override_colors/font_hover_color = Color(0, 0.72156864, 0.40784314, 1)
+theme_override_fonts/font = ExtResource("2_wp3el")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_ouk20")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_prwox")
+theme_override_styles/hover = SubResource("StyleBoxFlat_mae5d")
+text = "Play Again"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

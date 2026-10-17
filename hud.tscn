@@ -1,0 +1,56 @@
+[gd_scene format=3 uid="uid://tn84iu8qyl2r"]
+
+[ext_resource type="Script" uid="uid://41m0t8w1g5xs" path="res://hud.gd" id="1_64ctp"]
+[ext_resource type="FontFile" uid="uid://fi2iucbxxiyc" path="res://Assets/Resources/dogica.ttf" id="2_64ctp"]
+[ext_resource type="Texture2D" uid="uid://dd1u8msppxgl2" path="res://Assets/Resources/charge.svg" id="3_8sq4i"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_n2snw"]
+bg_color = Color(0.6, 0, 0.100000195, 0.36862746)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+corner_detail = 1
+
+[node name="HUD" type="CanvasLayer" unique_id=1912371171]
+script = ExtResource("1_64ctp")
+
+[node name="Panel" type="Panel" parent="." unique_id=1542976245]
+offset_left = 16.0
+offset_top = 16.0
+offset_right = 176.0
+offset_bottom = 96.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_n2snw")
+
+[node name="BatteryLabel" type="Label" parent="." unique_id=2065888012]
+offset_left = 96.0
+offset_top = 32.0
+offset_right = 156.0
+offset_bottom = 50.0
+theme_override_colors/font_color = Color(0, 0.72156864, 0.40784314, 1)
+theme_override_fonts/font = ExtResource("2_64ctp")
+theme_override_font_sizes/font_size = 20
+text = "100"
+horizontal_alignment = 2
+
+[node name="BatteryBarBorder" type="ColorRect" parent="." unique_id=1942304092]
+offset_left = 40.0
+offset_top = 64.0
+offset_right = 152.0
+offset_bottom = 80.0
+color = Color(0, 0.52, 0.29466662, 1)
+
+[node name="BatteryBar" type="ColorRect" parent="." unique_id=556311462]
+offset_left = 40.0
+offset_top = 64.0
+offset_right = 152.0
+offset_bottom = 80.0
+color = Color(0, 0.72156864, 0.40784314, 1)
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=209745523]
+offset_left = 40.0
+offset_top = 32.0
+offset_right = 56.0
+offset_bottom = 56.0
+texture = ExtResource("3_8sq4i")
+expand_mode = 1
