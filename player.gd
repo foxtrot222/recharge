@@ -4,6 +4,7 @@ const SPEED = 5.0
 const JUMP_VELOCITY = 12
 
 var xform : Transform3D
+var jumped = false
 
 func _physics_process(delta: float) -> void:
 	
@@ -20,13 +21,11 @@ func _physics_process(delta: float) -> void:
 	
 		
 	# Rotate the camera left or right
-	if Input.is_action_just_pressed("cam_left"):
-		$Camera_Controller.rotate_y(deg_to_rad(30))
-		Global.battery -= Global.CAM_COST
-		
-	if Input.is_action_just_pressed("cam_right"):
-		$Camera_Controller.rotate_y(deg_to_rad(-30))
-		Global.battery -= Global.CAM_COST
+	if Input.is_action_pressed("cam_left"):
+		$Camera_Controller.rotate_y(deg_to_rad(Global.rot_angle))
+
+	if Input.is_action_pressed("cam_right"):
+		$Camera_Controller.rotate_y(deg_to_rad(-Global.rot_angle))
 		
 	# Add the gravity.
 	if not is_on_floor():
@@ -35,10 +34,17 @@ func _physics_process(delta: float) -> void:
 	# Handle jump.
 	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
 		SoundManager.play_jump_sound()
+		if Global.vibrations:
+			Input.start_joy_vibration(0, 0.15, 0, 0.05)
 		velocity.y = JUMP_VELOCITY
 		Global.battery -= Global.JMP_COST
+		jumped = true
+
+	if jumped and not velocity.y:
+		jumped = false
+		if Global.vibrations:
+			Input.start_joy_vibration(0, 0.2, 0.15, 0.15)
 		
-	
 	if input_dir != Vector2.ZERO:
 		Global.battery -= Global.MOV_COST * delta
 	
@@ -81,7 +87,10 @@ func align_with_floor(floor_normal):
 
 
 func _on_fall_zone_body_entered(body: Node3D) -> void:
+	jumped = false
 	SoundManager.play_lose_sound()
+	if Global.vibrations:
+		Input.start_joy_vibration(0, 0, 0.5, 0.2)
 	body.position = Global.checkpoint_location
 	
 	

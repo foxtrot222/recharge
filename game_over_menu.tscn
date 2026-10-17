@@ -22,6 +22,17 @@ corner_detail = 1
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mae5d"]
 bg_color = Color(0.6392157, 0, 0.105882354, 1)
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wp3el"]
+bg_color = Color(0, 0.72156864, 0.40784314, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+corner_detail = 1
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4j5i6"]
+bg_color = Color(0.6392157, 0, 0.105882354, 1)
+
 [node name="GameOverMenu" type="Control" unique_id=955961534]
 layout_mode = 3
 anchors_preset = 0
@@ -59,7 +70,7 @@ theme_override_font_sizes/font_size = 50
 text = "No Charge left"
 horizontal_alignment = 1
 
-[node name="Button" type="Button" parent="." unique_id=1044235045]
+[node name="Play" type="Button" parent="." unique_id=1044235045]
 layout_mode = 0
 offset_left = 784.0
 offset_top = 384.0
@@ -75,4 +86,21 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_prwox")
 theme_override_styles/hover = SubResource("StyleBoxFlat_mae5d")
 text = "Play Again"
 
-[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[node name="Settings" type="Button" parent="." unique_id=1534540982]
+layout_mode = 0
+offset_left = 496.0
+offset_top = 384.0
+offset_right = 760.0
+offset_bottom = 448.0
+theme_override_colors/font_color = Color(0.6392157, 0, 0.105882354, 1)
+theme_override_colors/font_pressed_color = Color(0.6392157, 0, 0.105882354, 1)
+theme_override_colors/font_hover_color = Color(0, 0.72156864, 0.40784314, 1)
+theme_override_fonts/font = ExtResource("2_wp3el")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_wp3el")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_wp3el")
+theme_override_styles/hover = SubResource("StyleBoxFlat_4j5i6")
+text = "Settings"
+
+[connection signal="pressed" from="Play" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Settings" to="." method="_on_settings_pressed"]

@@ -63,7 +63,7 @@ theme_override_font_sizes/font_size = 105
 text = "Recharge!"
 horizontal_alignment = 1
 
-[node name="Button" type="Button" parent="." unique_id=1044235045]
+[node name="Play" type="Button" parent="." unique_id=1044235045]
 layout_mode = 0
 offset_left = 960.0
 offset_top = 384.0
@@ -78,6 +78,22 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_ouk20")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_ouk20")
 theme_override_styles/hover = SubResource("StyleBoxFlat_mae5d")
 text = "Play"
+
+[node name="Settings" type="Button" parent="." unique_id=946671537]
+layout_mode = 0
+offset_left = 672.0
+offset_top = 384.0
+offset_right = 936.0
+offset_bottom = 448.0
+theme_override_colors/font_color = Color(0.6392157, 0, 0.105882354, 1)
+theme_override_colors/font_pressed_color = Color(0.6392157, 0, 0.105882354, 1)
+theme_override_colors/font_hover_color = Color(0, 0.72156864, 0.40784314, 1)
+theme_override_fonts/font = ExtResource("2_fu7sn")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_ouk20")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_ouk20")
+theme_override_styles/hover = SubResource("StyleBoxFlat_mae5d")
+text = "Settings"
 
 [node name="Control" type="Control" parent="." unique_id=2143608363]
 anchors_preset = 0
@@ -238,4 +254,5 @@ offset_right = 112.0
 offset_bottom = 112.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_fu7sn")
 
-[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Play" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Settings" to="." method="_on_settings_pressed"]

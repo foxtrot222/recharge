@@ -37,6 +37,8 @@ func turn_around():
 
 func _on_side_checker_body_entered(body: Node3D) -> void:
 	SoundManager.play_lose_sound()
+	if Global.vibrations:
+		Input.start_joy_vibration(0, 0.1, 0, 0.1)
 	body.position = Global.checkpoint_location
 
 func _on_top_checker_body_entered(body: Node3D) -> void:

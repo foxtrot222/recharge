@@ -55,7 +55,7 @@ data = {
 metadata/_editor_floor_ = Vector3(0, 2, 0)
 
 [node name="Player" parent="." unique_id=2046800922 instance=ExtResource("5_aicyk")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.2491975, 1.4522223, 16.7661)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.9731674, 2.1491566, 13.728001)
 platform_on_leave = 2
 
 [node name="FallZone" type="Area3D" parent="." unique_id=1586762239]
@@ -195,9 +195,6 @@ hud = NodePath("../../HUD")
 [node name="Enemies" type="Node3D" parent="." unique_id=671708728]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.021838, 0)
 
-[node name="Enemy1" parent="Enemies" unique_id=1328676905 instance=ExtResource("7_h6smj")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 1.020968, -0.64144516, 9.024866)
-
 [node name="Enemy10" parent="Enemies" unique_id=921323219 instance=ExtResource("7_h6smj")]
 transform = Transform3D(0.99917924, 0.010440583, 0.039139926, -0.008558673, 0.99881333, -0.047944896, -0.03959405, 0.047570564, 0.9980829, 44.60663, 3.3562763, -24.62584)
 direction = Vector3(0, 0, 1)
@@ -206,10 +203,6 @@ direction = Vector3(0, 0, 1)
 transform = Transform3D(0.99917924, 0.010440583, 0.039139926, -0.008558673, 0.99881333, -0.047944896, -0.03959405, 0.047570564, 0.9980829, 44.60663, 3.3562763, -20.160868)
 speed = 4.0
 direction = Vector3(0, 0, 1)
-
-[node name="Enemy12" parent="Enemies" unique_id=485660615 instance=ExtResource("7_h6smj")]
-transform = Transform3D(-0.99917924, -0.010440586, -0.03914001, -0.008558673, 0.99881333, -0.047944896, 0.03959413, -0.04757056, -0.9980829, 44.60663, 3.3562763, -15.160868)
-direction = Vector3(0, 0, -1)
 
 [node name="Enemy13" parent="Enemies" unique_id=368373296 instance=ExtResource("7_h6smj")]
 transform = Transform3D(0.99917924, 0.010440583, 0.039139926, -0.008558673, 0.99881333, -0.047944896, -0.03959405, 0.047570564, 0.9980829, 44.60663, 3.3562763, -10.160868)
@@ -428,11 +421,6 @@ transform = Transform3D(0.99917924, 0.010440583, 0.039139926, -0.008558673, 0.99
 speed = 8.0
 direction = Vector3(0, 0, 1)
 
-[node name="Enemy20" parent="Enemies" unique_id=1803935187 instance=ExtResource("7_h6smj")]
-transform = Transform3D(0.99917924, 0.010440583, 0.039139926, -0.008558673, 0.99881333, -0.047944896, -0.03959405, 0.047570564, 0.9980829, 33.42138, 3.3562763, -10.160868)
-speed = 3.0
-direction = Vector3(0, 0, 1)
-
 [node name="Enemy21" parent="Enemies" unique_id=111889198 instance=ExtResource("7_h6smj")]
 transform = Transform3D(0.99917924, 0.010440583, 0.039139926, -0.008558673, 0.99881333, -0.047944896, -0.03959405, 0.047570564, 0.9980829, 33.42138, 3.3562763, -5.1608677)
 direction = Vector3(0, 0, 1)
@@ -444,10 +432,6 @@ direction = Vector3(0, 0, 1)
 
 [node name="Enemy23" parent="Enemies" unique_id=1440358619 instance=ExtResource("7_h6smj")]
 transform = Transform3D(0.99917924, 0.010440583, 0.039139926, -0.008558673, 0.99881333, -0.047944896, -0.03959405, 0.047570564, 0.9980829, 33.42138, 3.3562763, 3.8391323)
-direction = Vector3(0, 0, 1)
-
-[node name="Enemy9" parent="Enemies" unique_id=1270591556 instance=ExtResource("7_h6smj")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.12919569, -0.64144516, 9.024866)
 direction = Vector3(0, 0, 1)
 
 [node name="Enemy5" parent="Enemies" unique_id=1213025445 instance=ExtResource("7_h6smj")]
@@ -467,23 +451,6 @@ direction = Vector3(0, 0, 1)
 [node name="Enemy6" parent="Enemies" unique_id=960417699 instance=ExtResource("7_h6smj")]
 transform = Transform3D(-8.742278e-08, 0, -2, 0, 2, 0, 2, 0, -8.742278e-08, 1.020968, 0.37658525, -26.820225)
 speed = 8.0
-direction = Vector3(-1, 0, 0)
-
-[node name="Enemy2" parent="Enemies" unique_id=494969482 instance=ExtResource("7_h6smj")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -3.5838854, -0.4222138, 12.024866)
-
-[node name="Enemy3" parent="Enemies" unique_id=1610793489 instance=ExtResource("7_h6smj")]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 2.6822698, -0.5206425, 14.024866)
-direction = Vector3(-1, 0, 0)
-
-[node name="Enemy4" parent="Enemies" unique_id=266164750 instance=ExtResource("7_h6smj")]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0.3912182, -0.49708295, -11.790093)
-speed = 4.0
-direction = Vector3(-1, 0, 0)
-
-[node name="Enemy48" parent="Enemies" unique_id=638150122 instance=ExtResource("7_h6smj")]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0.3912182, -0.49708295, 0.20990658)
-speed = 4.0
 direction = Vector3(-1, 0, 0)
 
 [node name="Enemy49" parent="Enemies" unique_id=542867069 instance=ExtResource("7_h6smj")]
